@@ -1194,8 +1194,8 @@ cecho(kondycja2)
 						<colorTriggerFgColor>#000000</colorTriggerFgColor>
 						<colorTriggerBgColor>#000000</colorTriggerBgColor>
 						<regexCodeList>
-							<string>(Jestes) (na skraju smierci|ledwo zywy|ledwo zywa|zmasakrowany|zmasakrowana|ciezko ranny|ciezko ranna|w zlym stanie|w zlej kondycji|ranny|ranna|poraniony|poraniona|pokiereszowany|pokiereszowana|lekko ranny|lekko ranna|poturbowany|poturbowana|w dobrym stanie|w swietnej kondycji|w pelni zdrow|w pelni zdrowa).</string>
-							<string>(.* jest) (na skraju smierci|ledwo zywy|ledwo zywa|zmasakrowany|zmasakrowana|ciezko ranny|ciezko ranna|w zlym stanie|w zlej kondycji|ranny|ranna|poraniony|poraniona|pokiereszowany|pokiereszowana|lekko ranny|lekko ranna|poturbowany|poturbowana|w dobrym stanie|w swietnej kondycji|w pelni zdrow|w pelni zdrowa).</string>
+							<string>(Jestes)\s(na skraju smierci|ledwo zywy|ledwo zywa|zmasakrowany|zmasakrowana|ciezko ranny|ciezko ranna|w zlym stanie|w zlej kondycji|ranny|ranna|poraniony|poraniona|pokiereszowany|pokiereszowana|lekko ranny|lekko ranna|poturbowany|poturbowana|w dobrym stanie|w swietnej kondycji|w pelni zdrow|w pelni zdrowa)\.</string>
+							<string>(\w* jest)\s(na skraju smierci|ledwo zywy|ledwo zywa|zmasakrowany|zmasakrowana|ciezko ranny|ciezko ranna|w zlym stanie|w zlej kondycji|ranny|ranna|poraniony|poraniona|pokiereszowany|pokiereszowana|lekko ranny|lekko ranna|poturbowany|poturbowana|w dobrym stanie|w swietnej kondycji|w pelni zdrow|w pelni zdrowa)\.</string>
 						</regexCodeList>
 						<regexCodePropertyList>
 							<integer>1</integer>
