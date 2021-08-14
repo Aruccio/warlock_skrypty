@@ -832,6 +832,103 @@ cecho("&lt;hot_pink&gt;"..strzalki[kierunek])</script>
 							<integer>1</integer>
 						</regexCodePropertyList>
 					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>tropienie</name>
+						<script>local kierunek = matches[2]
+local strzalki =
+{
+["polnoc"] = [[
+
+
+      #
+    # # #
+   #  #  #
+      #
+      # 
+      ]],
+["polnocny-zachod"] = [[
+
+
+ # # # #
+ # #
+ #   #
+ #     #
+         #
+]],
+["zachod"] = [[
+
+
+    #
+  #
+# # # # # #
+  #
+    #
+    ]],
+["poludniowy-zachod"] = [[
+
+
+          #
+  #     #
+  #   #
+  # #
+  # # # #
+]],
+["poludnie"] = [[
+
+
+      #
+      #
+   #  #  #
+    # # #
+      #
+      ]],
+["poludniowy-wschod"]=[[
+
+
+  # 
+    #     #
+      #   #
+        # #
+    # # # #
+]],
+["wschod"] = [[
+
+
+      #
+        #
+# # # # # #
+        #
+      #
+      ]],
+["polnocny-wschod"]=[[
+
+
+    # # # #
+        # #
+      #   #
+    #     #
+  #
+  ]]
+}
+
+cecho("&lt;pale_green&gt;"..strzalki[kierunek])</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>Najswiezsze prowadza na (polnoc|polnocny-zachod|zachod|poludniowy-zachod|poludnie|poludniowy-wschod|wschod|polnocny-wschod).</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
 				</TriggerGroup>
 			</TriggerGroup>
 			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
