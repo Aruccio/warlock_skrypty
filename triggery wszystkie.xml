@@ -3,7 +3,7 @@
 <MudletPackage version="1.001">
 	<TriggerPackage>
 		<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-			<name>warlock moje</name>
+			<name>warlock-skrypty</name>
 			<script></script>
 			<triggerType>0</triggerType>
 			<conditonLineDelta>0</conditonLineDelta>
@@ -853,9 +853,9 @@ cecho("&lt;hot_pink&gt;"..strzalki[kierunek])</script>
 					<name>nowa poczta</name>
 					<script>selectString(matches[1], 1)
 replace("")
-cecho("&lt;light_salmon&gt; ===========================\n")
+cecho("&lt;light_salmon&gt; =============================\n")
 cecho("&lt;light_salmon&gt; "..matches[1].."\n")
-cecho("&lt;light_salmon&gt; ===========================\n")</script>
+cecho("&lt;light_salmon&gt; =============================\n")</script>
 					<triggerType>0</triggerType>
 					<conditonLineDelta>0</conditonLineDelta>
 					<mStayOpen>0</mStayOpen>
@@ -1149,8 +1149,7 @@ replace("Poczynilas "..matches[2].." ("..postepy[pos].."/17) postepy, odkad poja
 					</Trigger>
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>kondycja</name>
-						<script>local x = matches[2]
-local kondycje ={
+						<script>local kondycje ={
 ["na skraju smierci"]="&lt;red&gt;na skraju smierci (1/14)",
 ["ledwo zywy"] = "&lt;red&gt;ledwo zywy (2/14)",
 ["ledwo zywa"] = "&lt;red&gt;ledwo zywa (2/14)",
@@ -1175,14 +1174,11 @@ local kondycje ={
 ["w pelni zdrow"] = "&lt;green&gt;w pelni zdrow (14/14)",
 ["w pelni zdrowa"] = "&lt;green&gt;w pelni zdrowa (14/14)"
 }
-
-local kondycja = matches[3]
-local kondycja2 = kondycje[matches[3]]
+local who = matches[2]
+local kondycja = kondycje[matches[3]]
 selectString(matches[1], 1)
-replace(matches[2].." " )
-cecho(kondycja2)
-
-</script>
+replace(who.." " )
+cecho(kondycja .. ".")</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
 						<mStayOpen>0</mStayOpen>
@@ -1194,11 +1190,9 @@ cecho(kondycja2)
 						<colorTriggerFgColor>#000000</colorTriggerFgColor>
 						<colorTriggerBgColor>#000000</colorTriggerBgColor>
 						<regexCodeList>
-							<string>(Jestes)\s(na skraju smierci|ledwo zywy|ledwo zywa|zmasakrowany|zmasakrowana|ciezko ranny|ciezko ranna|w zlym stanie|w zlej kondycji|ranny|ranna|poraniony|poraniona|pokiereszowany|pokiereszowana|lekko ranny|lekko ranna|poturbowany|poturbowana|w dobrym stanie|w swietnej kondycji|w pelni zdrow|w pelni zdrowa)\.</string>
-							<string>(\w* jest)\s(na skraju smierci|ledwo zywy|ledwo zywa|zmasakrowany|zmasakrowana|ciezko ranny|ciezko ranna|w zlym stanie|w zlej kondycji|ranny|ranna|poraniony|poraniona|pokiereszowany|pokiereszowana|lekko ranny|lekko ranna|poturbowany|poturbowana|w dobrym stanie|w swietnej kondycji|w pelni zdrow|w pelni zdrowa)\.</string>
+							<string>(Jestes|\w*jest)\s(na skraju smierci|ledwo zywy|ledwo zywa|zmasakrowany|zmasakrowana|ciezko ranny|ciezko ranna|w zlym stanie|w zlej kondycji|ranny|ranna|poraniony|poraniona|pokiereszowany|pokiereszowana|lekko ranny|lekko ranna|poturbowany|poturbowana|w dobrym stanie|w swietnej kondycji|w pelni zdrow|w pelni zdrowa)\.</string>
 						</regexCodeList>
 						<regexCodePropertyList>
-							<integer>1</integer>
 							<integer>1</integer>
 						</regexCodePropertyList>
 					</Trigger>
@@ -1250,8 +1244,8 @@ cecho(" ("..liczby[zmc].."/9)")</script>
 						<script>local podcecha = matches[3]
 local podcechy =
 {
-["bardzo niewiele"] = "&lt;lawn_green&gt;[4/5]",
-["niewiele"] = "&lt;green_yellow&gt;[3/5]",
+["bardzo malo"] = "&lt;green&gt;[4/5]",
+["malo"] = "&lt;green_yellow&gt; [3/5]",
 ["troche"] = "&lt;yellow&gt;[2/5]",
 ["duzo"] = "&lt;orange&gt;[1/5]",
 ["bardzo duzo"] = "&lt;tomato&gt;[0/5]"
@@ -1273,7 +1267,7 @@ cecho(matches[4])</script>
 						<colorTriggerFgColor>#000000</colorTriggerFgColor>
 						<colorTriggerBgColor>#000000</colorTriggerBgColor>
 						<regexCodeList>
-							<string>(Wydaje ci sie, ze )(bardzo niewiele|niewiele|troche|duzo|bardzo duzo)( ci brakuje,.*)</string>
+							<string>(Wydaje ci sie, ze )(bardzo malo|malo|troche|duzo|bardzo duzo)( ci brakuje,.*)</string>
 						</regexCodeList>
 						<regexCodePropertyList>
 							<integer>1</integer>
