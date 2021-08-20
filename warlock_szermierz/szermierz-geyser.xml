@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<ScriptPackage>
+		<ScriptGroup isActive="yes" isFolder="yes">
+			<name>spece</name>
+			<packageName></packageName>
+			<script></script>
+			<eventHandlerList />
+			<Script isActive="yes" isFolder="no">
+				<name>szermierz unik</name>
+				<packageName></packageName>
+				<script>unik_info = Geyser.Label:new({
+  name = "unik_info",
+  x = 160, y = 855,
+  width = 45, height = 45,
+  fgColor = "white",
+  message = [[&lt;center&gt;UNIK&lt;/center&gt;]],
+})
+
+unik_info:setColor(0,255,0,150)
+unik_info:setFontSize(11)</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>szermierz tniecie</name>
+				<packageName></packageName>
+				<script>tnij_info = Geyser.Label:new({
+  name = "tnij_info",
+  x = 110, y = 855,
+  width = 45, height = 45,
+  fgColor = "white",
+  message = [[&lt;center&gt;TNIJ&lt;/center&gt;]],
+})
+
+tnij_info:setColor(0,255,0,150)
+tnij_info:setFontSize(11)</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>szermierz pchniecie</name>
+				<packageName></packageName>
+				<script>pchnij_info = Geyser.Label:new({
+  name = "pchnij_info",
+  x = 60, y = 855,
+  width = 45, height = 45,
+  fgColor = "white",
+  message = [[&lt;center&gt;PCHNIJ&lt;/center&gt;]],
+})
+
+pchnij_info:setColor(0,255,0,150)
+pchnij_info:setFontSize(11)</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>szermierz rozbrojenie</name>
+				<packageName></packageName>
+				<script>rozbroj_info = Geyser.Label:new({
+  name = "rozbroj_info",
+  x = 210, y = 855,
+  width = 45, height = 45,
+  fgColor = "white",
+  message = [[&lt;center&gt;ROZB&lt;/center&gt;]],
+})
+
+rozbroj_info:setColor(0,255,0,150)
+rozbroj_info:setFontSize(11)</script>
+				<eventHandlerList />
+			</Script>
+		</ScriptGroup>
+	</ScriptPackage>
+</MudletPackage>
