@@ -1,0 +1,4 @@
+W profilu C:\Users\twojuser\.config\mudlet\profiles\twojprofil musi sie znajdowac folder warlock_skrypty,
+a wewnatrz niego folder luas ze skryptow.
+
+Plik mpackage wystarczy przeciągnąc na mudleta.
