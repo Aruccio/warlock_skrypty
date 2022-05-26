@@ -52,7 +52,39 @@ silaall["tega"] = "9"; silaall["tegi"] = "9";
 silaall["potezny"] = "10"; silaall["potezna"] = "10";
 silaall["mocarny"] = "11"; silaall["mocarna"] = "11";
 silaall["tytaniczny"] = "12"; silaall["tytaniczna"] = "12";
-silaall["wszechmocny"] = "13"; silaall["wszechmocna"] = "13"
+silaall["wszechmocny"] = "13"; silaall["wszechmocna"] = "13";
+
+silaall["slabiutki jak na polboga"] = "14"; silaall["slabiutka jak na polboginie"] = "14";
+silaall["slabowity jak na polboga"] = "15"; silaall["slabowita jak na polboginie"] = "15";
+silaall["watly jak na polboga"] = "16"; silaall["watla jak na polboginie"] = "16";
+silaall["cherlawy jak na polboga"] = "17"; silaall["cherlawa jak na polboginie"] = "17";
+silaall["slaby jak na polboga"] = "18"; silaall["slaba jak na polboginie"] = "18";
+silaall["krzepki jak na polboga"] = "19"; silaall["krzepka jak na polboginie"] = "19";
+silaall["silny jak na polboga"] = "20"; silaall["silna jak na polboginie"] = "20";
+silaall["mocny jak na polboga"] = "21"; silaall["mocna jak na polboginie"] = "21";
+silaall["tega jak na polboga"] = "22"; silaall["tegi jak na polboginie"] = "22";
+silaall["potezny jak na polboga"] = "23"; silaall["potezna jak na polboginie"] = "23";
+silaall["mocarny jak na polboga"] = "24"; silaall["mocarna jak na polboginie"] = "24";
+silaall["tytaniczny jak na polboga"] = "25"; silaall["tytaniczna jak na polboginie"] = "25";
+silaall["wszechmocny jak na polboga"] = "26"; silaall["wszechmocna jak na polboginie"] = "26";
+
+silaall["slabiutki jak na boga"] = "27"; silaall["slabiutka jak na boginie"] = "27";
+silaall["slabowity jak na boga"] = "28"; silaall["slabowita jak na boginie"] = "28";
+silaall["watly jak na boga"] = "29"; silaall["watla jak na boginie"] = "29";
+silaall["cherlawy jak na boga"] = "30"; silaall["cherlawa jak na boginie"] = "30";
+silaall["slaby jak na boga"] = "31"; silaall["slaba jak na boginie"] = "31";
+silaall["krzepki jak na boga"] = "32"; silaall["krzepka jak na boginie"] = "32";
+silaall["silny jak na boga"] = "33"; silaall["silna jak na boginie"] = "33";
+silaall["mocny jak na boga"] = "34"; silaall["mocna jak na boginie"] = "34";
+silaall["tega jak na boga"] = "35"; silaall["tegi jak na boginie"] = "35";
+silaall["potezny jak na boga"] = "36"; silaall["potezna jak na boginie"] = "36";
+silaall["mocarny jak na boga"] = "37"; silaall["mocarna jak na boginie"] = "37";
+silaall["tytaniczny jak na boga"] = "38"; silaall["tytaniczna jak na boginie"] = "38";
+silaall["wszechmocny jak na boga"] = "39"; silaall["wszechmocna jak na boginie"] = "39";
+
+
+
+
 
 -- CECHY ZRECZNOSC
 zrecznoscall ={}
@@ -69,6 +101,35 @@ zrecznoscall["zwinny"] = "10"; zrecznoscall["zwinna"] = "10";
 zrecznoscall["gibki"] = "11"; zrecznoscall["gibka"] = "11";
 zrecznoscall["akrobatyczny"] = "12"; zrecznoscall["akrobatyczna"] = "12";
 zrecznoscall["ekwilibrystyczny"] = "13"; zrecznoscall["ekwilibrystyczna"] = "13"
+
+zrecznoscall["nieskoordynowany jak na polboga"] = "14"; zrecznoscall["nieskoordynowana jak na polboginie"] = "14";
+zrecznoscall["niezdarny jak na polboga"] = "15"; zrecznoscall["niezdarna jak na polboginie"] = "15";
+zrecznoscall["niezreczny jak na polboga"] = "16"; zrecznoscall["niezreczna jak na polboginie"] = "16";
+zrecznoscall["niezgrabny jak na polboga"] = "17"; zrecznoscall["niezgrabna jak na polboginie"] = "17";
+zrecznoscall["niewprawny jak na polboga"] = "18"; zrecznoscall["niewprawna jak na polboginie"] = "18";
+zrecznoscall["sprawny jak na polboga"] = "19"; zrecznoscall["sprawna jak na polboginie"] = "19";
+zrecznoscall["zreczny jak na polboga"] = "20"; zrecznoscall["zreczna jak na polboginie"] = "20";
+zrecznoscall["szybki jak na polboga"] = "21"; zrecznoscall["szybka jak na polboginie"] = "21";
+zrecznoscall["wprawny jak na polboga"] = "22"; zrecznoscall["wprawna jak na polboginie"] = "22";
+zrecznoscall["zwinny jak na polboga"] = "23"; zrecznoscall["zwinna jak na polboginie"] = "23";
+zrecznoscall["gibki jak na polboga"] = "24"; zrecznoscall["gibka jak na polboginie"] = "24";
+zrecznoscall["akrobatyczny jak na polboga"] = "25"; zrecznoscall["akrobatyczna jak na polboginie"] = "25";
+zrecznoscall["ekwilibrystyczny jak na polboga"] = "26"; zrecznoscall["ekwilibrystyczna jak na polboginie"] = "26"
+
+zrecznoscall["nieskoordynowany jak na boga"] = "27"; zrecznoscall["nieskoordynowana jak na boginie"] = "27";
+zrecznoscall["niezdarny jak na boga"] = "28"; zrecznoscall["niezdarna jak na boginie"] = "28";
+zrecznoscall["niezreczny jak na boga"] = "29"; zrecznoscall["niezreczna jak na boginie"] = "29";
+zrecznoscall["niezgrabny jak na boga"] = "30"; zrecznoscall["niezgrabna jak na boginie"] = "30";
+zrecznoscall["niewprawny jak na boga"] = "31"; zrecznoscall["niewprawna jak na boginie"] = "31";
+zrecznoscall["sprawny jak na boga"] = "32"; zrecznoscall["sprawna jak na boginie"] = "32";
+zrecznoscall["zreczny jak na boga"] = "33"; zrecznoscall["zreczna jak na boginie"] = "33";
+zrecznoscall["szybki jak na boga"] = "34"; zrecznoscall["szybka jak na boginie"] = "34";
+zrecznoscall["wprawny jak na boga"] = "35"; zrecznoscall["wprawna jak na boginie"] = "35";
+zrecznoscall["zwinny jak na boga"] = "36"; zrecznoscall["zwinna jak na boginie"] = "36";
+zrecznoscall["gibki jak na boga"] = "37"; zrecznoscall["gibka jak na boginie"] = "37";
+zrecznoscall["akrobatyczny jak na boga"] = "38"; zrecznoscall["akrobatyczna jak na boginie"] = "38";
+zrecznoscall["ekwilibrystyczny jak na boga"] = "39"; zrecznoscall["ekwilibrystyczna jak na boginie"] = "39"
+
 
 
 
@@ -88,6 +149,38 @@ wytkaall["umiesniony"] = "11"; wytkaall["umiesniona"] = "11";
 wytkaall["muskularny"] = "12"; wytkaall["muskularna"] = "12";
 wytkaall["atletyczny"] = "13"; wytkaall["atletyczna"] = "13"
 
+wytkaall["delikatny jak na polboga"] = "1"; wytkaall["delikatna jak na polboginie"] = "1";
+wytkaall["chorowity jak na polboga"] = "2"; wytkaall["chorowita jak na polboginie"] = "2";
+wytkaall["rachityczny jak na polboga"] = "3"; wytkaall["rachityczna jak na polboginie"] = "3";
+wytkaall["mizerny jak na polboga"] = "4"; wytkaall["mizerna jak na polboginie"] = "4";
+wytkaall["kruchy jak na polboga"] = "5"; wytkaall["krucha jak na polboginie"] = "5";
+wytkaall["dobrze zbudowany jak na polboga"] = "6"; wytkaall["dobrze zbudowana jak na polboginie"] = "6";
+wytkaall["wytrzymaly jak na polboga"] = "7"; wytkaall["wytrzymala jak na polboginie"] = "7";
+wytkaall["odporny jak na polboga"] = "8"; wytkaall["odporna jak na polboginie"] = "8";
+wytkaall["masywny jak na polboga"] = "9"; wytkaall["masywna jak na polboginie"] = "9";
+wytkaall["twardy jak na polboga"] = "10"; wytkaall["twarda jak na polboginie"] = "10";
+wytkaall["umiesniony jak na polboga"] = "11"; wytkaall["umiesniona jak na polboginie"] = "11";
+wytkaall["muskularny jak na polboga"] = "12"; wytkaall["muskularna jak na polboginie"] = "12";
+wytkaall["atletyczny jak na polboga"] = "13"; wytkaall["atletyczna jak na polboginie"] = "13"
+
+wytkaall["delikatny jak na boga"] = "1"; wytkaall["delikatna jak na boginie"] = "1";
+wytkaall["chorowity jak na boga"] = "2"; wytkaall["chorowita jak na boginie"] = "2";
+wytkaall["rachityczny jak na boga"] = "3"; wytkaall["rachityczna jak na boginie"] = "3";
+wytkaall["mizerny jak na boga"] = "4"; wytkaall["mizerna jak na boginie"] = "4";
+wytkaall["kruchy jak na boga"] = "5"; wytkaall["krucha jak na boginie"] = "5";
+wytkaall["dobrze zbudowany jak na boga"] = "6"; wytkaall["dobrze zbudowana jak na boginie"] = "6";
+wytkaall["wytrzymaly jak na boga"] = "7"; wytkaall["wytrzymala jak na boginie"] = "7";
+wytkaall["odporny jak na boga"] = "8"; wytkaall["odporna jak na boginie"] = "8";
+wytkaall["masywny jak na boga"] = "9"; wytkaall["masywna jak na boginie"] = "9";
+wytkaall["twardy jak na boga"] = "10"; wytkaall["twarda jak na boginie"] = "10";
+wytkaall["umiesniony jak na boga"] = "11"; wytkaall["umiesniona jak na boginie"] = "11";
+wytkaall["muskularny jak na boga"] = "12"; wytkaall["muskularna jak na boginie"] = "12";
+wytkaall["atletyczny jak na boga"] = "13"; wytkaall["atletyczna jak na boginie"] = "13"
+
+
+
+
+
 -- CECHY INTELIGENCJA
 intall = {}
 intall["bezmyslny"] = "1"; intall["bezmyslna"] = "1";
@@ -103,6 +196,38 @@ intall["lotny"] = "10"; intall["lotna"] = "10";
 intall["bystry"] = "11"; intall["bystra"] = "11";
 intall["blyskotliwy"] = "12"; intall["blyskotliwa"] = "12";
 intall["genialny"] = "13"; intall["genialna"] = "13"
+
+intall["bezmyslny jak na polboga"] = "14"; intall["bezmyslna jak na polboginie"] = "14";
+intall["ciemny jak na polboga"] = "15"; intall["ciemna jak na polboginie"] = "15";
+intall["tepy jak na polboga"] = "16"; intall["tepa jak na polboginie"] = "16";
+intall["nierozumny jak na polboga"] = "17"; intall["nierozumna jak na polboginie"] = "17";
+intall["ograniczony jak na polboga"] = "18"; intall["ograniczona jak na polboginie"] = "18";
+intall["rozgarniety jak na polboga"] = "19"; intall["rozgarnieta jak na polboginie"] = "19";
+intall["pojetny jak na polboga"] = "20"; intall["pojetna jak na polboginie"] = "20";
+intall["zmyslny jak na polboga"] = "21"; intall["zmyslna jak na polboginie"] = "21";
+intall["inteligentny jak na polboga"] = "22"; intall["inteligentna jak na polboginie"] = "22";
+intall["lotny jak na polboga"] = "23"; intall["lotna jak na polboginie"] = "23";
+intall["bystry jak na polboga"] = "24"; intall["bystra jak na polboginie"] = "24";
+intall["blyskotliwy jak na polboga"] = "25"; intall["blyskotliwa jak na polboginie"] = "25";
+intall["genialny jak na polboga"] = "26"; intall["genialna jak na polboginie"] = "26"
+
+
+intall["bezmyslny jak na boga"] = "27"; intall["bezmyslna jak na boginie"] = "27";
+intall["ciemny jak na boga"] = "28"; intall["ciemna jak na boginie"] = "28";
+intall["tepy jak na boga"] = "29"; intall["tepa jak na boginie"] = "29";
+intall["nierozumny jak na boga"] = "30"; intall["nierozumna jak na boginie"] = "30";
+intall["ograniczony jak na boga"] = "31"; intall["ograniczona jak na boginie"] = "31";
+intall["rozgarniety jak na boga"] = "32"; intall["rozgarnieta jak na boginie"] = "32";
+intall["pojetny jak na boga"] = "33"; intall["pojetna jak na boginie"] = "33";
+intall["zmyslny jak na boga"] = "34"; intall["zmyslna jak na boginie"] = "34";
+intall["inteligentny jak na boga"] = "35"; intall["inteligentna jak na boginie"] = "35";
+intall["lotny jak na boga"] = "36"; intall["lotna jak na boginie"] = "36";
+intall["bystry jak na boga"] = "37"; intall["bystra jak na boginie"] = "37";
+intall["blyskotliwy jak na boga"] = "38"; intall["blyskotliwa jak na boginie"] = "38";
+intall["genialny jak na boga"] = "39"; intall["genialna jak na boginie"] = "39"
+
+
+
 
 -- CECHY MADROSC
 madroscall = {}
@@ -120,6 +245,34 @@ madroscall["uczony"] = "11"; madroscall["uczona"] = "11";
 madroscall["oswiecony"] = "12"; madroscall["oswiecona"] = "12";
 madroscall["wszechwiedzacy"] = "13"; madroscall["wszechwiedzaca"] = "13"
 
+madroscall["glupi jak na polboga"] = "14"; madroscall["glupia jak na polboginie"] = "14";
+madroscall["durny jak na polboga"] = "15"; madroscall["durna jak na polboginie"] = "15";
+madroscall["zacofany jak na polboga"] = "16"; madroscall["zacofana jak na polboginie"] = "16";
+madroscall["niemadry jak na polboga"] = "17"; madroscall["niemadra jak na polboginie"] = "17";
+madroscall["niewyksztalcony jak na polboga"] = "18"; madroscall["niewyksztalcona jak na polboginie"] = "18";
+madroscall["roztropny jak na polboga"] = "19"; madroscall["roztropna jak na polboginie"] = "19";
+madroscall["wyksztalcony jak na polboga"] = "20"; madroscall["wyksztalcona jak na polboginie"] = "20";
+madroscall["rozsadny jak na polboga"] = "21"; madroscall["rozsadna jak na polboginie"] = "21";
+madroscall["logiczny jak na polboga"] = "22"; madroscall["logiczna jak na polboginie"] = "22";
+madroscall["madry jak na polboga"] = "23"; madroscall["madra jak na polboginie"] = "23";
+madroscall["uczony jak na polboga"] = "24"; madroscall["uczona jak na polboginie"] = "24";
+madroscall["oswiecony jak na polboga"] = "25"; madroscall["oswiecona jak na polboginie"] = "25";
+madroscall["wszechwiedzacy jak na polboga"] = "26"; madroscall["wszechwiedzaca jak na polboginie"] = "26"
+
+madroscall["glupi jak na boga"] = "27"; madroscall["glupia jak na boginie"] = "27";
+madroscall["durny jak na boga"] = "28"; madroscall["durna jak na boginie"] = "28";
+madroscall["zacofany jak na boga"] = "29"; madroscall["zacofana jak na boginie"] = "29";
+madroscall["niemadry jak na boga"] = "30"; madroscall["niemadra jak na boginie"] = "30";
+madroscall["niewyksztalcony jak na boga"] = "31"; madroscall["niewyksztalcona jak na boginie"] = "31";
+madroscall["roztropny jak na boga"] = "32"; madroscall["roztropna jak na boginie"] = "32";
+madroscall["wyksztalcony jak na boga"] = "33"; madroscall["wyksztalcona jak na boginie"] = "33";
+madroscall["rozsadny jak na boga"] = "34"; madroscall["rozsadna jak na boginie jak na boginie"] = "34";
+madroscall["logiczny jak na boga"] = "35"; madroscall["logiczna jak na boginie"] = "35";
+madroscall["madry jak na boga"] = "36"; madroscall["madra jak na boginie"] = "36";
+madroscall["uczony jak na boga"] = "37"; madroscall["uczona jak na boginie"] = "37";
+madroscall["oswiecony jak na boga"] = "38"; madroscall["oswiecona jak na boginie"] = "38";
+madroscall["wszechwiedzacy jak na boga"] = "39"; madroscall["wszechwiedzaca jak na boginie"] = "39"
+
 -- CECHY ODWAGA
 odwagaall={}
 odwagaall["tchorzliwy"] ="1"; odwagaall["tchorzliwa"] ="1";
@@ -127,7 +280,7 @@ odwagaall["strachliwy"] ="2"; odwagaall["strachliwa"] ="2";
 odwagaall["bojazliwy"] ="3"; odwagaall["bojazliwa"] ="3";
 odwagaall["lekliwy"] ="4"; odwagaall["lekliwa"] ="4";
 odwagaall["niepewny"] ="5"; odwagaall["niepewna"] ="5";
-odwagaall["zdecydowany"] ="6"; odwagaall["zdecydowany"] ="6";
+odwagaall["zdecydowany"] ="6"; odwagaall["zdecydowana"] ="6";
 odwagaall["niezachwiany"] ="7"; odwagaall["niezachwiana"] ="7";
 odwagaall["odwazny"] ="8"; odwagaall["odwazna"] ="8";
 odwagaall["dzielny"] = "9"; odwagaall["dzielna"] = "9";
@@ -135,6 +288,36 @@ odwagaall["nieugiety"] = "10"; odwagaall["nieugieta"] = "10";
 odwagaall["mezny"] = "11"; odwagaall["mezna"] = "11";
 odwagaall["bohaterski"] = "12"; odwagaall["braterska"] = "12";
 odwagaall["heroiczny"] = "13"; odwagaall["heroiczna"] = "13";
+
+odwagaall["tchorzliwy jak na polboga"] ="14"; odwagaall["tchorzliwa jak na polboginie"] ="14";
+odwagaall["strachliwy jak na polboga"] ="15"; odwagaall["strachliwa jak na polboginie"] ="15";
+odwagaall["bojazliwy jak na polboga"] ="16"; odwagaall["bojazliwa jak na polboginie"] ="16";
+odwagaall["lekliwy jak na polboga"] ="17"; odwagaall["lekliwa jak na polboginie"] ="17";
+odwagaall["niepewny jak na polboga"] ="18"; odwagaall["niepewna jak na polboginie"] ="18";
+odwagaall["zdecydowany jak na polboga"] ="19"; odwagaall["zdecydowana jak na polboginie"] ="19";
+odwagaall["niezachwiany jak na polboga"] ="20"; odwagaall["niezachwiana jak na polboginie"] ="20";
+odwagaall["odwazny jak na polboga"] ="21"; odwagaall["odwazna jak na polboginie"] ="21";
+odwagaall["dzielny jak na polboga"] = "22"; odwagaall["dzielna jak na polboginie"] = "22";
+odwagaall["nieugiety jak na polboga"] = "23"; odwagaall["nieugieta jak na polboginie"] = "23";
+odwagaall["mezny jak na polboga"] = "24"; odwagaall["mezna jak na polboginie"] = "24";
+odwagaall["bohaterski jak na polboga"] = "25"; odwagaall["braterska jak na polboginie"] = "25";
+odwagaall["heroiczny jak na polboga"] = "26"; odwagaall["heroiczna jak na polboginie"] = "26";
+
+odwagaall["tchorzliwy jak na boga"] ="27"; odwagaall["tchorzliwa jak na boginie"] ="27";
+odwagaall["strachliwy jak na boga"] ="28"; odwagaall["strachliwa jak na boginie"] ="28";
+odwagaall["bojazliwy jak na boga"] ="29"; odwagaall["bojazliwa jak na boginie"] ="29";
+odwagaall["lekliwy jak na boga"] ="30"; odwagaall["lekliwa jak na boginie"] ="30";
+odwagaall["niepewny jak na boga"] ="31"; odwagaall["niepewna jak na boginie"] ="31";
+odwagaall["zdecydowany jak na boga"] ="32"; odwagaall["zdecydowana jak na boginie"] ="32";
+odwagaall["niezachwiany jak na boga"] ="33"; odwagaall["niezachwiana jak na boginie"] ="33";
+odwagaall["odwazny jak na boga"] ="34"; odwagaall["odwazna jak na boginie"] ="34";
+odwagaall["dzielny jak na boga"] = "35"; odwagaall["dzielna jak na boginie"] = "35";
+odwagaall["nieugiety jak na boga"] = "36"; odwagaall["nieugieta jak na boginie"] = "36";
+odwagaall["mezny jak na boga"] = "37"; odwagaall["mezna jak na boginie"] = "37";
+odwagaall["bohaterski jak na boga"] = "38"; odwagaall["braterska jak na boginie"] = "38";
+odwagaall["heroiczny jak na boga"] = "39"; odwagaall["heroiczna jak na boginie"] = "39";
+
+
 
 
 -- LEVELE
@@ -175,3 +358,21 @@ postepyall["gigantyczne"] = "gigantyczne (15/18)";
 postepyall["kolosalne"] = "kolosalne (16/18)";
 postepyall["niesamowite"] = "niesamowite (17/18)";
 postepyall["fantastyczne"] = "fantastyczne (18/18)";
+
+
+-- RUNY
+runy = {}
+runy["el"]="el (1)";
+runy["eld"] = "eld (2)";
+runy["tir"] = "tir (3)";
+runy["nef"] = "nef (4)";
+runy["eth"] = "eth (5)";
+runy["ith"] = "ith (6)";
+runy["tal"] = "tal (7)";
+runy["ral"] = "ral (8)";
+runy["ort"] = "ort (9)";
+runy["thul"] = "thul (10)";
+runy["amn"] = "amn (11)";
+runy["sol"] = "sol (12)";
+runy["shael"] = "shael (13)";
+runy["dol"] = "dol (14)";

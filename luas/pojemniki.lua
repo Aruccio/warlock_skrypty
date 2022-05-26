@@ -1,8 +1,11 @@
 local inv = {}
 function ItemsInRows(pojemnik,podzielone)
-
+  inv = {}
+  
   setFgColor(255, 255, 179)
-  echo("\n"..pojemnik.. " zawiera:\n")
+  if pojemnik~="" then
+    echo("\n"..pojemnik.. " zawiera:\n")
+  end
   resetFormat()
 
 --  if pojemnik=='.*woreczek.*' then
@@ -22,8 +25,6 @@ function ItemsInRows(pojemnik,podzielone)
         setFgColor(255, 230, 128)
       elseif string.find(data,' platynow.*') then
         setFgColor(179, 255, 255)
-      elseif string.find(data,' (szabl|miecz|topor).*') then
-        setFgColor(128, 255, 170)
       end
 
       echo(data)
@@ -40,6 +41,28 @@ function ItemsInRows(pojemnik,podzielone)
     echo("\\=================================================/\n")
 --  end
 end
+
+function AdditionalItemsInRows(podzielone)
+
+
+  setFgColor(255, 255, 179)
+  echo("\n"..pojemnik.. " zawiera:\n")
+  resetFormat()
+
+  echo(data)
+      
+  resetFormat()
+  local temp = "|  "..data
+  local length = 50-temp:len()
+  local toprint =""
+  for i = 1,length,1 do
+    toprint = toprint.." "
+  end
+  echo(toprint.."|\n")
+  echo("\\=================================================/\n")
+--  end
+end
+
 function ListContent(podzielone)
 
     for index,data in ipairs(podzielone) do
@@ -51,55 +74,17 @@ function ListContent(podzielone)
         setFgColor(255, 230, 128)
       elseif string.find(data,' platynow.*') then
         setFgColor(179, 255, 255)
-      elseif string.find(data,' (szabl|miecz|topor).*') then
-        setFgColor(128, 255, 170)
       end
-
+      
       table:insert(inv,data)
     end
---  end
 return inv
 end
-
-
-function inventory_create_regexp_filter(tab, endline)
-    return function(item)
-        return rex.find(item.name, create_pattern(tab, endline))
-    end
-end
-
-local weapons = { "darda", "dardy", "multon", "kord", "puginal", "gladius", "topor", "berdysz", "siekier", "czekan", "oskard", "kilof", "tasak", "tabar", "nadziak", "miecz", "sihill", "drannach", "szabl", "szabel", "rapier", "scimitar", "katzbalger", "stilett", "pal", "sztylet", "halabard", "falchion", "mlot", "obusz", "wloczni", "pik[ei]", "noz", "maczug", "morgenstern", "kordelas", "mizerykordi", "buzdygan", "korbacz", "gal[ae]z(?!k) ", "bulaw", "drag", "kiscien", "nog[ai] stolow", "dag[ai]", "wloczni[aei]", "floret", "wekier", "walek", "kostur", "kos[aye]", "szponton", "partyzan", "glewi", "gizarm", "dzid", "naginat", "rohatyn", "korsek", "cep", "trojz[ea]b", "ronkon", "runk", "flamberg", "poltorak", "bulat", "nimsz", "szamszir", "lami", "schiavon", "lewak", "sierp", "lask", "wid[el]", "saif", "koncerz", "kij", "espadon", "claymor", "cinquend", "szpad", "karabel", "jatagan", "baselard", "katar", "bastard", "kafar", "kindzal", "harpun", "kotwic", "kadzielnic", "lancet", "ostrz", "berl", "chepesz", "spis( |$|y|e|a)", "talwar", "dluto", "pejcz", "kanczug", "parazonium", "lancuch", "kropacz", "piernacz", "estok" }
-local shields = { "tarcz", "puklerz", "pawez", "luskow. pancern. skorup. zolwia" }
-local torso = { "brygantyn", "napiersnik", "kirys", "kolczug", "karacen", "kaftan", "tunik", "zbroj", "bajdan[ay]", "anim[eay]", "kozus", "kurt", "kamizel", "becht", "pancerz", "zbro. plytow", "polpancerz", "nabrzusznik", "bajdan" }
-local head = { "helm", "burgonet", "misiurk", "kaptur", "morion", "basinet", "salad", "przylbic", "diadem", "szyszak", "narbut[ay]", "armet", "casquett", "czapk", "beret", "turban", "gigantyczn. wzmacnian. czaszk", "barbut", "kapalin", "koron", "klobuk" }
-local legs = { "nagolennik", "spoden", "nogawic", "buty", "butow", "trzewik", "spodni", "spodnic", "naudziak", "sandal", "nakolannik", "nabiodr" }
-local hands = { "nareczak", "naramiennik", "rekawic", "karwasz" }
-local wear = { "futro", "kubraczek", "koszul", "sukni", "sukien", "plaszcz", "peleryn", "tog", "szat", "bloniaste skrzydl", "chust", "pas( |$|y)", "gemm", "obroz", "szat", "kolnierz", "dublet", "kapelusz", "przepask", "wams", "oficer[ek]", "bigwant", "calun", "kapuz" }
-local jewelery = { "pierscien(?!iowa)", "naszyjnik", "bransolet", "spink", "talizman", "amulet", "kolczyk", "lancuszki", "koral", "wisior", "medalion", "lancusz", "brosz", "szarf", "koli[iae]", "sygnet", "obracze?k", "potrojn. sznur.*", "cwiek( |$|i|ow)(?!ana)" }
-local gems = { "obsydia(ny|now|n)", "labrado(ry|row|r)", "oliwi(ny|now|n)", "gaga(ty|tow|t)", "fluory(ty|tow|t)", "burszty(ny|now|n)", "ametys(ty|tow|t)", "kwar(ce|cow|c)", "rubi(ny|now|n)", "piry(ty|tow|t)", "serpenty(ny|now|n)", "per(ly|le|la|el)", "serpenty(ny|now|n)", "malachi(ty|tow|t)", "karneo(le|low|l)", "lazury(ty|tow|t)", "nefry(ty|tow|t)", "aleksandry(ty|tow|t)", "celesty(ny|now|n)", "monacy(ty|tow|t)", "azury(ty|tow|t)", "jaspi(sy|sow|s)", "onyk(sy|sow|s)", "turmali(ny|now|n)", "awentury(ny|now|n)", "turku(sy|sow|s)", "opa(li|le|l)", "kryszta(ly|low|l)", "hematy(ty|tow|t)", "rodoli(ty|tow|t)", "aga(ty|tow|t)", "jaskrawozolt.* cytry(ny|now|n(?!e))", "apaty(ty|tow|t)", "kyani(ty|tow|t)", "akwamary(ny|now|n)", "ioli(ty|tow|t)", "diopsy(dy|dow|d)", "cyrko(ny|now|n)", "zoisy(ty|tow|t)", "grana(ty|tow|t)", "almandy(ny|now|n)", "ortokla(zy|zow|z)", "topa(zy|zow|z)", "tytani(ty|tow|t)", "diamen(ty|tow|t)", "szafi(ry|row|r)", "szmaragd", "chryzoberyl", "spinel", "chryzopraz", "rodochrozyt", "heliodor"}
-
-inventory_group_definitions = {
-    { name = "bronie", filter = inventory_create_regexp_filter(weapons) },
-    { name = "korpus", filter = inventory_create_regexp_filter(torso) },
-    { name = "tarcze", filter = inventory_create_regexp_filter(shields) },
-    { name = "glowa", filter = inventory_create_regexp_filter(head) },
-    { name = "rece", filter = inventory_create_regexp_filter(hands) },
-    { name = "nogi", filter = inventory_create_regexp_filter(legs) },
-    { name = "ubrania", filter = inventory_create_regexp_filter(wear) },
-    { name = "bizuteria", filter = inventory_create_regexp_filter(jewelery) },
-    { name = "kamienie", filter = inventory_create_regexp_filter(gems, true) },
-    --{ name = "klucze", filter = keys_filter}
-    }
-
-
 
 
 
 function inventory_print(podzielone, columns_count, filter)
     local container_elements = ListContent(podzielone)
-    if filter then
-        container_elements = filter(container_elements)
-    end
 
     local result = {}
     for _, group in ipairs(inventory_group_definitions) do

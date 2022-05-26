@@ -5,9 +5,13 @@ cecho(kon.."<reset>"..miedzy..m.."<reset>.")
 end
 
 function cechy_liczby(sila,zrecznosc,wytrzymalosc,inteligencja,madrosc,odwaga)
-  local s = silaall[sila]; local z = zrecznoscall[zrecznosc];
-  local w = wytkaall[wytrzymalosc];local i = intall[inteligencja];
-  local m = madroscall[madrosc]; local o = odwagaall[odwaga]
+  local s = silaall[sila];
+  local z = zrecznoscall[zrecznosc];
+  local w = wytkaall[wytrzymalosc];
+  local i = intall[inteligencja];
+  local m = madroscall[madrosc];
+  local o = odwagaall[odwaga]
+
 cecho(sila.." <yellow_green>("..s.."), ")
 cecho(zrecznosc.." <yellow_green>("..z.."), ")
 cecho(wytrzymalosc.." <yellow_green>("..w.."), ")
