@@ -9,4 +9,8 @@ Pliki mpackage wystarczy przeciągnąc na mudleta.
 Warlockwindowed to zmodyfikowane oficjalne skrypty.
 Warlockunofficial to niezalezne osobne skrypty.
 
+
+Okienkowe skrypty (Warlockwindowed) wyglądają tak:
+![image](https://user-images.githubusercontent.com/46422568/170592733-544982d0-a9d9-48ce-9350-946f7e1cc943.png)
+
 Zeby okienkowe skrypty działały, trzeba usunąć te, które się same ładują i wyłączyć ich pobieranie(mudlet options->general->Allow server to install script packages)
