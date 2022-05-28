@@ -714,8 +714,9 @@ flashChatContainerButton(chatContainer)</script>
 kto = #matches[3] &gt; 0 and matches[3] or matches[4]
 poziom = matches[6]
 ipoz, max = jakiPoziomOpisu(kondycje, poziom)
+cecho(poziom)
 if(ipoz) then
-  prefix("["..hpcolors[poziom].."&lt;reset&gt;] ", cecho)
+  --prefix("["..hpcolors[poziom].."&lt;reset&gt;] ", cecho)
 	selectCaptureGroup(6)
 	setFgColor(255 - (ipoz * 255 / max), ipoz * 255 / max, 60);
 end
@@ -5672,6 +5673,54 @@ function displayHelp()
 end
 
 registerAnonymousEventHandler("sysDataSendRequest", handleHelpCommands)
+</script>
+					<eventHandlerList />
+				</ScriptGroup>
+				<Script isActive="yes" isFolder="no">
+					<name>init</name>
+					<packageName></packageName>
+					<script>local path = package.path
+local homeDirectory = getMudletHomeDir():gsub("\\", "/") .. "/warlock_skrypty/luas/"
+
+local luaDirectory = string.format("%s/%s", homeDirectory, [[?.lua]])
+package.path = string.format("%s;%s", luaDirectory, path)
+
+package.loaded.pojemniki = nil
+package.loaded.bronie_spec = nil
+package.loaded.poziomy_poziomy = nil
+package.loaded.poziomy_funkcje = nil
+package.loaded.utils = nil
+--package.loaded.herbs_manager = nil
+
+require('pojemniki')
+require('bronie')
+require('poziomy_poziomy')
+require('poziomy_funkcje')
+require('utils')
+--require('herbs_manager')</script>
+					<eventHandlerList />
+				</Script>
+				<ScriptGroup isActive="yes" isFolder="yes">
+					<name>Kolorowanie</name>
+					<packageName></packageName>
+					<script>function ColorNajm(x)
+selectCaptureGroup(x)
+fg'medium_purple'
+resetFormat()
+end
+
+function ColorPlayer(x)
+selectCaptureGroup(x)
+fg'navajo_white'
+resetFormat()
+end
+
+function ColorWiz(x)
+selectCaptureGroup(x)
+fg'thistle'
+resetFormat()
+end
+
 </script>
 					<eventHandlerList />
 				</ScriptGroup>
