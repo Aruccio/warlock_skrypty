@@ -884,6 +884,86 @@ cecho(nazwa1..um1.." "..ums[um1]..nazwa2..um2.." "..ums[um2])</script>
 							<integer>1</integer>
 						</regexCodePropertyList>
 					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>dlug</name>
+						<script>local dlug = matches[3]
+local przed = matches[2]
+local popr = dlugi[dlug]
+selectString(matches[1], 1)
+replace("")
+cecho(przed..popr..".")</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>(Twoj dlug Smierci jest )(znikomy|minimalny|nieznaczny|maly|nieduzy|spory|znaczny|duzy|ogromny|przytlaczajacy)\.</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>podcechy</name>
+						<script>local podcecha = matches[3]
+selectString(matches[1], 1)
+replace(matches[2]..podcecha)
+cecho(" "..podcechy[podcecha])
+cecho(matches[4])</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>(Wydaje ci sie, ze )(bardzo malo|malo|troche|duzo|bardzo duzo)( ci brakuje,.*)</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>cechy</name>
+						<script>local sila = matches[2]
+local zrecznosc = matches[3]
+local wytrzymalosc = matches[4]
+local inteligencja = matches[5]
+local madrosc = matches[6]
+local odwaga = matches[7]
+
+selectString(matches[1], 1)
+replace("Jestes ")
+cechy_liczby(sila,zrecznosc,wytrzymalosc,inteligencja,madrosc,odwaga)</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>Jestes (slabiutka|slabowita|watla|cherlawa|slaba|krzepka|silna|mocna|tega|potezna|mocarna|tytaniczna|wszechmocna|slabiutka jak na polboginie|slabowita jak na polboginie|watla jak na polboginie|cherlawa jak na polboginie|slaba jak na polboginie|krzepka jak na polboginie|silna jak na polboginie|mocna jak na polboginie|tega jak na polboginie|potezna jak na polboginie|mocarna jak na polboginie|tytaniczna jak na polboginie|wszechmocna jak na polboginie|slabiutka jak na boginie|slabowita jak na boginie|watla jak na boginie|cherlawa jak na boginie|slaba jak na boginie|krzepka jak na boginie|silna jak na boginie|mocna jak na boginie|tega jak na boginie|potezna jak na boginie|mocarna jak na boginie|tytaniczna jak na boginie|wszechmocna jak na boginie), (nieskoordynowana|niezdarna|niezreczna|niezgrabna|niewprawna|sprawna|zreczna|szybka|wprawna|zwinna|gibka|akrobatyczna|ekwilibrystyczna|nieskoordynowana jak na polboginie|niezdarna jak na polboginie|niezreczna jak na polboginie|niezgrabna jak na polboginie|niewprawna jak na polboginie|sprawna jak na polboginie|zreczna jak na polboginie|szybka jak na polboginie|wprawna jak na polboginie|zwinna jak na polboginie|gibka jak na polboginie|akrobatyczna jak na polboginie|ekwilibrystyczna jak na polboginie|nieskoordynowana jak na boginie|niezdarna jak na boginie|niezreczna jak na boginie|niezgrabna jak na boginie|niewprawna jak na boginie|sprawna jak na boginie|zreczna jak na boginie|szybka jak na boginie|wprawna jak na boginie|zwinna jak na boginie|gibka jak na boginie|akrobatyczna jak na boginie|ekwilibrystyczna jak na boginie), (delikatna|chorowita|rachityczna|mizerny|mizerna|krucha|dobrze zbudowany|dobrze zbudowana|wytrzymaly|wytrzymala|odporny|odporna|masywny|masywna|twardy|twarda|umiesniona|muskularna|atletyczna|delikatna jak na polboginie|chorowita jak na polboginie|rachityczna jak na polboginie|mizerna jak na polboginie|krucha jak na polboginie|dobrze zbudowana jak na polboginie|wytrzymala jak na polboginie|odporna jak na polboginie|masywna jak na polboginie|twarda jak na polboginie|umiesniona jak na polboginie|muskularna jak na polboginie|atletyczna jak na polboginie|delikatna jak na boginie|chorowita jak na boginie|rachityczna jak na boginie|mizerna jak na boginie|krucha jak na boginie|dobrze zbudowana jak na boginie|wytrzymala jak na boginie|odporna jak na boginie|masywna jak na boginie|twarda jak na boginie|umiesniona jak na boginie|muskularna jak na boginie|atletyczna jak na boginie), (bezmyslna|ciemna|tepa|nierozumna|ograniczona|rozgarnieta|pojetna|zmyslna|inteligentna|lotna|bystra|blyskotliwa|genialna|bezmyslna jak na polboginie|ciemna jak na polboginie|tepa jak na polboginie|nierozumna jak na polboginie|ograniczona jak na polboginie|rozgarnieta jak na polboginie|pojetna jak na polboginie|zmyslna jak na polboginie|inteligentna jak na polboginie|lotna jak na polboginie|bystra jak na polboginie|blyskotliwa jak na polboginie|genialna jak na polboginie|bezmyslna jak na boginie|ciemna jak na boginie|tepa jak na boginie|nierozumna jak na boginie|ograniczona jak na boginie|rozgarnieta jak na boginie|pojetna jak na boginie|zmyslna jak na boginie|inteligentna jak na boginie|lotna jak na boginie|bystra jak na boginie|blyskotliwa jak na boginie|genialna jak na boginie), (glupia|durna|zacofana|niemadra|niewyksztalcona|roztropna|wyksztalcona|rozsadna|logiczna|madra|uczona|oswiecona|wszechwiedzaca|glupia jak na polboginie|durna jak na polboginie|zacofana jak na polboginie|niemadra jak na polboginie|niewyksztalcona jak na polboginie|roztropna jak na polboginie|wyksztalcona jak na polboginie|rozsadna jak na polboginie|logiczna jak na polboginie|madra jak na polboginie|uczona jak na polboginie|oswiecona jak na polboginie|wszechwiedzaca jak na polboginie|glupia jak na boginie|durna jak na boginie|zacofana jak na boginie|niemadra jak na boginie|niewyksztalcona jak na boginie|roztropna jak na boginie|wyksztalcona jak na boginie|rozsadna jak na boginie|logiczna jak na boginie|madra jak na boginie|uczona jak na boginie|oswiecona jak na boginie|wszechwiedzaca jak na boginie) i (tchorzliwa|strachliwa|bojazliwa|lekliwa|niepewna|zdecydowana|niezachwiana|odwazna|dzielna|nieugieta|mezna|braterska|heroiczna|tchorzliwa jak na polboginie|strachliwa jak na polboginie|bojazliwa jak na polboginie|lekliwa jak na polboginie|niepewna jak na polboginie|zdecydowana jak na polboginie|niezachwiana jak na polboginie|odwazna jak na polboginie|dzielna jak na polboginie|nieugieta jak na polboginie|mezna jak na polboginie|braterska jak na polboginie|heroiczna jak na polboginie|tchorzliwa jak na boginie|strachliwa jak na boginie|bojazliwa jak na boginie|lekliwa jak na boginie|niepewna jak na boginie|zdecydowana jak na boginie|niezachwiana jak na boginie|odwazna jak na boginie|dzielna jak na boginie|nieugieta jak na boginie|mezna jak na boginie|braterska jak na boginie|heroiczna jak na boginie).</string>
+							<string>Jestes (slabiutki|slabowity|watly|cherlawy|slaby|krzepki|silny|mocny|tegi|potezny|mocarny|tytaniczny|wszechmocny|slabiutki jak na polboga|slabowity jak na polboga|watly jak na polboga|cherlawy jak na polboga|slaby jak na polboga|krzepki jak na polboga|silny jak na polboga|mocny jak na polboga|tegi jak na polboga|potezny jak na polboga|mocarny jak na polboga|tytaniczny jak na polboga|wszechmocny jak na polboga|slabiutki jak na boga|slabowity jak na boga|watly jak na boga|cherlawy jak na boga|slaby jak na boga|krzepka|silny jak na boga|mocny jak na boga|tegi jak na boga|potezny jak na boga|mocarny jak na boga|tytaniczny jak na boga|wszechmocny jak na boga), (nieskoordynowany|niezdarny|niezreczny|niezgrabny|niewprawny|sprawny|zreczny|szybki|wprawny|zwinny|gibki|akrobatyczny|ekwilibrystyczny|nieskoordynowany jak na polboga|niezdarny jak na polboga|niezreczny jak na polboga|niezgrabny jak na polboga|niewprawny jak na polboga|sprawny jak na polboga|zreczny jak na polboga|szybki jak na polboga|wprawny jak na polboga|zwinny jak na polboga|gibki jak na polboga|akrobatyczny jak na polboga|ekwilibrystyczny jak na polboga|nieskoordynowany jak na boga|niezdarny jak na boga|niezreczny jak na boga|niezgrabny jak na boga|niewprawny jak na boga|sprawny jak na boga|zreczny jak na boga|szybki jak na boga|wprawny jak na boga|zwinny jak na boga|gibki jak na boga|akrobatyczny jak na boga|ekwilibrystyczny jak na boga), (delikatny|chorowity|rachityczny|mizerny|kruchy|dobrze zbudowany|wytrzymaly|odporny|masywny|twardy|umiesniony|muskularny|atletyczny|delikatny jak na polboga|chorowity jak na polboga|rachityczny jak na polboga|mizerny jak na polboga|kruchy jak na polboga|dobrze zbudowany jak na polboga|wytrzymaly jak na polboga|odporny jak na polboga|masywny jak na polboga|twardy jak na polboga|umiesniony jak na polboga|muskularny jak na polboga|atletyczny jak na polboga|delikatny jak na boga|chorowity jak na boga|rachityczny jak na boga|mizerny jak na boga|kruchy jak na boga|dobrze zbudowany jak na boga|wytrzymaly jak na boga|odporny jak na boga|masywny jak na boga|twardy jak na boga|umiesniony jak na boga|muskularny jak na boga|atletyczny jak na boga), (bezmyslny|ciemny|tepy|nierozumny|ograniczony|rozgarniety|pojetny|zmyslny|inteligentny|lotny|bystry|blyskotliwy|genialny|bezmyslny jak na polboga|ciemny jak na polboga|tepy jak na polboga|nierozumny jak na polboga|ograniczony jak na polboga|rozgarniety jak na polboga|pojetny jak na polboga|zmyslny jak na polboga|inteligentny jak na polboga|lotny jak na polboga|bystry jak na polboga|blyskotliwy jak na polboga|genialny jak na polboga|bezmyslny jak na boga|ciemny jak na boga|tepy jak na boga|nierozumny jak na boga|ograniczony jak na boga|rozgarniety jak na boga|pojetny jak na boga|zmyslny jak na boga|inteligentny jak na boga|lotny jak na boga|bystry jak na boga|blyskotliwy jak na boga|genialny jak na boga), (glupi|durny|zacofany|niemadry|niewyksztalcony|roztropny|wyksztalcony|rozsadny|logiczny|madry|uczony|oswiecony|wszechwiedzacy|glupi jak na polboga|durny jak na polboga|zacofany jak na polboga|niemadry jak na polboga|niewyksztalcony jak na polboga|roztropny jak na polboga|wyksztalcony jak na polboga|rozsadny jak na polboga|logiczny jak na polboga|madry jak na polboga|uczony jak na polboga|oswiecony jak na polboga|wszechwiedzacy jak na polboga|glupi jak na boga|durny jak na boga|zacofany jak na boga|niemadry jak na boga|niewyksztalcony jak na boga|roztropny jak na boga|wyksztalcony jak na boga|rozsadny jak na boga|logiczny jak na boga|madry jak na boga|uczony jak na boga|oswiecony jak na boga|wszechwiedzacy jak na boga) i (tchorzliwy|strachliwy|bojazliwy|lekliwy|niepewny|zdecydowany|niezachwiany|odwazny|dzielny|nieugiety|mezny|braterski|heroiczny|tchorzliwy jak na polboga|strachliwy jak na polboga|bojazliwy jak na polboga|lekliwy jak na polboga|niepewny jak na polboga|zdecydowany jak na polboga|niezachwiany jak na polboga|odwazny jak na polboga|dzielny jak na polboga|nieugiety jak na polboga|mezny jak na polboga|braterski jak na polboga|heroiczny jak na polboga|tchorzliwy jak na boga|strachliwy jak na boga|bojazliwy jak na boga|lekliwy jak na boga|niepewny jak na boga|zdecydowany jak na boga|niezachwiany jak na boga|odwazny jak na boga|dzielny jak na boga|nieugiety jak na boga|mezny jak na boga|braterski jak na boga|heroiczny jak na boga).</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
 				</TriggerGroup>
 				<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 					<name>walka</name>
@@ -1699,18 +1779,8 @@ resetFormat()</script>
 							<mSoundFile></mSoundFile>
 							<colorTriggerFgColor>#000000</colorTriggerFgColor>
 							<colorTriggerBgColor>#000000</colorTriggerBgColor>
-							<regexCodeList>
-								<string>ciecie</string>
-								<string>tniesz</string>
-								<string>rownowag</string>
-								<string>Spokojnie...</string>
-							</regexCodeList>
-							<regexCodePropertyList>
-								<integer>0</integer>
-								<integer>0</integer>
-								<integer>0</integer>
-								<integer>0</integer>
-							</regexCodePropertyList>
+							<regexCodeList />
+							<regexCodePropertyList />
 							<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 								<name>ciecie</name>
 								<script></script>
@@ -1895,7 +1965,7 @@ resetFormat()</script>
 									<integer>0</integer>
 								</regexCodePropertyList>
 							</TriggerGroup>
-							<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 								<name>jest_rownowaga</name>
 								<script></script>
 								<triggerType>0</triggerType>
@@ -1915,7 +1985,7 @@ resetFormat()</script>
 									<integer>0</integer>
 								</regexCodePropertyList>
 							</Trigger>
-							<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 								<name>brak_rownowagi</name>
 								<script></script>
 								<triggerType>0</triggerType>
@@ -2057,6 +2127,51 @@ resetFormat()</script>
 								<regexCodeList>
 									<string>^(Probujesz) piruetem wyminac .* ale ci sie to nie udaje.$</string>
 									<string>^(Wirujac) w zgrabnym piruecie .* do odsloniecia sie</string>
+								</regexCodeList>
+								<regexCodePropertyList>
+									<integer>1</integer>
+									<integer>1</integer>
+								</regexCodePropertyList>
+							</Trigger>
+						</TriggerGroup>
+						<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>Upiory</name>
+							<script></script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList />
+							<regexCodePropertyList />
+							<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+								<name>Spec</name>
+								<script>prefix("&lt;dodger_blue&gt;[UP] ", cecho)
+selectCaptureGroup(1)
+if matches[2] == "Przestrzen" then
+fg"sky_blue"
+elseif matches[2] == "Probujesz" then
+fg"thistle"
+end
+resetFormat()</script>
+								<triggerType>0</triggerType>
+								<conditonLineDelta>0</conditonLineDelta>
+								<mStayOpen>0</mStayOpen>
+								<mCommand></mCommand>
+								<packageName></packageName>
+								<mFgColor>#ff0000</mFgColor>
+								<mBgColor>#ffff00</mBgColor>
+								<mSoundFile></mSoundFile>
+								<colorTriggerFgColor>#000000</colorTriggerFgColor>
+								<colorTriggerBgColor>#000000</colorTriggerBgColor>
+								<regexCodeList>
+									<string>(Przestrzen) dookola Ciebie blednie i czernieje.*</string>
+									<string>(Probujesz) porwac .* do swiata umarlych, lecz .* Saurona.$</string>
 								</regexCodeList>
 								<regexCodePropertyList>
 									<integer>1</integer>
@@ -4996,6 +5111,29 @@ ums =
 ["swietnie"] = "&lt;yellow_green&gt;(8/10)&lt;reset&gt;",
 ["wspaniale"] = "&lt;lawn_green&gt;(9/10)&lt;reset&gt;",
 ["fenomenalnie"] = "&lt;green&gt;(10/10)&lt;reset&gt;"
+}
+
+local dlugi=
+{
+ ["znikomy"]="&lt;green&gt;znikomy[1/10]&lt;reset&gt;",
+ ["minimalny"] = "&lt;chartreuse&gt;minimalny [2/10]&lt;reset&gt;",
+ ["nieznaczny"] = "&lt;lawn_green&gt;nieznaczny [3/10]&lt;reset&gt;",
+ ["maly"] = "&lt;yellow_green&gt;maly [4/10]&lt;reset&gt;",
+ ["nieduzy"] = "&lt;yellow&gt;nieduzy [5/10]&lt;reset&gt;",
+ ["spory"] = "&lt;gold&gt;spory [6/10]&lt;reset&gt;",
+ ["znaczny"] = "&lt;dark_orange&gt;znaczny [7/10]&lt;reset&gt;",
+ ["duzy"] = "&lt;orange&gt;duzy [8/10]&lt;reset&gt;",
+ ["ogromny"] = "&lt;tomato&gt;ogromny [9/10]&lt;reset&gt;",
+ ["przytlaczajacy"] = "&lt;red&gt;przytlaczajacy [10/10]&lt;reset&gt;"
+}
+
+local podcechy =
+{
+["bardzo malo"] = "&lt;green&gt;[4/5]",
+["malo"] = "&lt;green_yellow&gt; [3/5]",
+["troche"] = "&lt;yellow&gt;[2/5]",
+["duzo"] = "&lt;orange&gt;[1/5]",
+["bardzo duzo"] = "&lt;tomato&gt;[0/5]"
 }
 
 mana = {"u kresu sil", "wykonczon(y|a|e)", "wyczerpan(y|a|e)", "w zlej kondycji", "bardzo zmeczon(y|a|e)",
