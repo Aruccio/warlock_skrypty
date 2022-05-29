@@ -626,11 +626,11 @@ jak = matches[4]
 cel = matches[6]
 tekst = matches[7]
 --display(matches)
-selectCaptureGroup(6)
+selectCaptureGroup(7)
 fg("khaki")
 
 if(cel == "ciebie") then
-selectCaptureGroup(6)
+selectCaptureGroup(7)
 fg("gold")
 end
 chatConsole:cecho("[" .. getTime(true, "HH:mm") .. "] &lt;gold&gt;" .. kto .. jak .. (cel ~= "" and (" do " .. cel) or ("")) .. ": &lt;white&gt;" .. tekst .. "&lt;reset&gt;\n")
@@ -710,13 +710,37 @@ flashChatContainerButton(chatContainer)</script>
 					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 						<name>moje_cudze_hp</name>
 						<script>--display(matches)
+hpcolors ={
+["na skraju smierci"]="&lt;sandy_brown&gt;#      ",             -- +
+["ledwo zywy"] = "&lt;green&gt;#      ",                  -- #
+["ledwo zywa"] = "&lt;green&gt;#      ",                  -- #
+["zmasakrowany"] =  "&lt;green&gt;#&lt;sandy_brown&gt;#     ",      -- #+
+["zmasakrowana"] =  "&lt;green&gt;#&lt;sandy_brown&gt;#     ",      -- #+
+["ciezko ranny"] = "&lt;green&gt;##     ",                   -- ##
+["ciezko ranna"] = "&lt;green&gt;##     ",                   -- ##
+["w zlym stanie"] =  "&lt;green&gt;##&lt;sandy_brown&gt;#    ",     -- ##+
+["w zlej kondycji"] = "&lt;green&gt;###    ",                  -- ###
+["ranny"]= "&lt;green&gt;###&lt;sandy_brown&gt;#   ",    -- ###+
+["ranna"]= "&lt;green&gt;###&lt;sandy_brown&gt;#   ",    -- ###+
+["poraniony"] = "&lt;green&gt;####   ",                  -- ####
+["poraniona"] = "&lt;green&gt;####   ",                  -- ####
+["pokiereszowany"] = "&lt;green&gt;####&lt;sandy_brown&gt;#  ",   -- ####+
+["pokiereszowana"] = "&lt;green&gt;####&lt;sandy_brown&gt;#  ",   -- ####+
+["lekko ranny"] = "&lt;green&gt;#####  ",                  -- #####
+["lekko ranna"] = "&lt;green&gt;#####  ",                  -- #####
+["poturbowany"] = "&lt;green&gt;#####&lt;sandy_brown&gt;# ",  -- #####+
+["poturbowana"] = "&lt;green&gt;#####&lt;sandy_brown&gt;# ",  -- #####+
+["w dobrym stanie"] = "&lt;green&gt;###### ",                  -- ######
+["w swietnej kondycji"] = "&lt;green&gt;######&lt;sandy_brown&gt;#", -- ######+
+["w pelni zdrow"] = "&lt;green&gt;#######",                  -- #######
+["w pelni zdrowa"] = "&lt;green&gt;#######",                  -- #######
+}
 
 kto = #matches[3] &gt; 0 and matches[3] or matches[4]
 poziom = matches[6]
 ipoz, max = jakiPoziomOpisu(kondycje, poziom)
-cecho(poziom)
 if(ipoz) then
-  --prefix("["..hpcolors[poziom].."&lt;reset&gt;] ", cecho)
+  prefix("["..hpcolors[poziom].."&lt;reset&gt;] ", cecho)
 	selectCaptureGroup(6)
 	setFgColor(255 - (ipoz * 255 / max), ipoz * 255 / max, 60);
 end
@@ -851,8 +875,10 @@ resetFormat();</script>
 						<colorTriggerBgColor>#000000</colorTriggerBgColor>
 						<regexCodeList>
 							<string> i jestes (w pelni wypoczet(y|a)|wypoczet(y|a)|troche zmeczon(y|a)|zmeczon(y|a)|bardzo zmeczon(y|a)|nieco wyczerpan(y|a)|wyczerpan(y|a)|bardzo wyczerpan(y|a)|wycienczon(y|a)|calkowicie wycienczon(y|a))[\., ]</string>
+							<string> Jestes (w pelni wypoczet(y|a)|wypoczet(y|a)|troche zmeczon(y|a)|zmeczon(y|a)|bardzo zmeczon(y|a)|nieco wyczerpan(y|a)|wyczerpan(y|a)|bardzo wyczerpan(y|a)|wycienczon(y|a)|calkowicie wycienczon(y|a)).</string>
 						</regexCodeList>
 						<regexCodePropertyList>
+							<integer>1</integer>
 							<integer>1</integer>
 						</regexCodePropertyList>
 					</Trigger>
@@ -1623,7 +1649,7 @@ end
 ipoz, max = jakiPoziomOpisu(opisy_rany, rana)
 if(ipoz) then
 	selectString(rana, 1)
-  if matches[2] == "Desesharr" then
+  if matches[2] == "Meibzuz" then
       setFgColor(230 - (ipoz * 255 / max), 230 - (ipoz * 200 / max), 255);
   else
       setFgColor(255, 255 - (ipoz * 255 / max), 200 - (ipoz * 200 / max));
@@ -2112,7 +2138,7 @@ selectCaptureGroup(1)
 if matches[2] == "Wirujac" then
 fg"sky_blue"
 elseif matches[2] == "Probujesz" then
-fg"light_steel_blue"
+fg"thistle"
 end
 resetFormat()</script>
 								<triggerType>0</triggerType>
@@ -2914,6 +2940,394 @@ resetFormat();</script>
 						<integer>1</integer>
 					</regexCodePropertyList>
 				</TriggerGroup>
+				<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>RunesCounter</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList />
+					<regexCodePropertyList />
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>Start opowiesci</name>
+						<script>expandAlias("\initrunes")</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>Nawet nie zauwazyles kiedy, ale znalazles sie w zupelnie innym czasie i miejscu.</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>0</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>Materializuje sie runa</name>
+						<script>local runa = matches[2]
+
+if(runa == "el") then runaEL=runaEL+1
+elseif(runa == "eld") then runaELD=runaELD+1
+elseif(runa == "tir") then runaTIR=runaTIR+1
+elseif(runa == "nef") then runaNEF=runaNEF+1
+elseif(runa == "eth") then runaETH=runaETH+1
+elseif(runa == "ith") then runaITH=runaITH+1
+elseif(runa == "ral") then runaRAL=runaRAL+1
+elseif(runa == "ort") then runaETH=runaORT+1
+elseif(runa == "thul") then runaTHUL=runaTHUL+1
+elseif(runa == "amn") then runaETH=runaAMN+1
+elseif(runa == "sol") then runaSOL=runaSOL+1
+elseif(runa =="shael") then runaSHAEL=runaSHAEL+1
+elseif(runa == "dol") then runaDOL=runaDOL+1
+end
+</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>W twoim reku materializuje sie runa (.*)\.</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+				</TriggerGroup>
+				<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Kolory</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList />
+					<regexCodePropertyList />
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>Gremlin</name>
+						<script>selectCaptureGroup(1)
+fg'orange_red'
+resetFormat()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>[pP]rzygarbiony zakapturzony gremlin</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>Gracze</name>
+						<script></script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList />
+						<regexCodePropertyList />
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>Apophis</name>
+							<script>ColorPlayer(2)</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>(Apophisa|Apophisem|Apophisie|Apophisowi|Apophis)</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>Masza</name>
+							<script>ColorPlayer(2)</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>(Masza|Masze|Maszy)</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>Vazrat</name>
+							<script>ColorPlayer(2)</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>(Vazrata|Vazracie|Vazratem|Vazratowi|Vazrat)</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>Gulbul</name>
+							<script>ColorPlayer(2)</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>(Gulbula|Gulbulem|Gulbulu|Gulbulowi|Gulbul)</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>Gurth</name>
+							<script>ColorPlayer(2)</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>(Gurtha|Gurthem|Gurhcie|Gurthowi|Gurth)</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>Genius</name>
+							<script>ColorPlayer(2)</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>(Geniusa|Geniusowi|Geniusem|Geniusie|Genius)</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>Leo</name>
+							<script>ColorPlayer(2)</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>(Leo)</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+					</TriggerGroup>
+					<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>Wizy</name>
+						<script></script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList />
+						<regexCodePropertyList />
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>Ingwar</name>
+							<script>ColorWiz(2)</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>(Ingwara|Ingwarowi|Ingwarem|Ingwarze|Ingwar)</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+					</TriggerGroup>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="yes" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>Runy</name>
+						<script>ColorString(#matches)</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>(run|runy|rune)( )(el|eld|tir|nef|eth|ith|tal|ral|ort|thul|amn)[,. ]</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>Szeregi</name>
+						<script></script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList />
+						<regexCodePropertyList />
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>Przygotowanie do zmiany</name>
+							<script>selectCaptureGroup(1)
+fg'plum'
+resetFormat()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>Zaczynasz zmieniac swoja pozycje w szeregu.*</string>
+								<string>.* zaczyna zmieniac swoja pozycje w szeregu.</string>
+								<string>Alez jestes juz w .* szeregu.</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+								<integer>1</integer>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+							<name>Zmienil szereg</name>
+							<script>selectCaptureGroup(1)
+fg'hot_pink'
+resetFormat()</script>
+							<triggerType>0</triggerType>
+							<conditonLineDelta>0</conditonLineDelta>
+							<mStayOpen>0</mStayOpen>
+							<mCommand></mCommand>
+							<packageName></packageName>
+							<mFgColor>#ff0000</mFgColor>
+							<mBgColor>#ffff00</mBgColor>
+							<mSoundFile></mSoundFile>
+							<colorTriggerFgColor>#000000</colorTriggerFgColor>
+							<colorTriggerBgColor>#000000</colorTriggerBgColor>
+							<regexCodeList>
+								<string>.* przechodzi do.*szeregu.*</string>
+								<string>Przechodzisz do .*</string>
+							</regexCodeList>
+							<regexCodePropertyList>
+								<integer>1</integer>
+								<integer>1</integer>
+							</regexCodePropertyList>
+						</Trigger>
+					</TriggerGroup>
+				</TriggerGroup>
 			</TriggerGroup>
 		</TriggerGroup>
 	</TriggerPackage>
@@ -3298,7 +3712,7 @@ send("um", false)
 </script>
 							<command></command>
 							<packageName></packageName>
-							<regex>um</regex>
+							<regex>^um$</regex>
 						</Alias>
 						<Alias isActive="yes" isFolder="no">
 							<name>nalista</name>
@@ -3430,6 +3844,47 @@ Adjustable.Container:doAll(deleteSaveFile)
 						<command></command>
 						<packageName></packageName>
 						<regex>^/cont_show_all$</regex>
+					</Alias>
+				</AliasGroup>
+				<AliasGroup isActive="yes" isFolder="yes">
+					<name>RunesCounter</name>
+					<script></script>
+					<command></command>
+					<packageName></packageName>
+					<regex></regex>
+					<Alias isActive="yes" isFolder="no">
+						<name>/initrunes</name>
+						<script>runaEL = 0
+runaELD = 0
+runaTIR = 0
+runaNEF = 0
+runaETH = 0
+runaITH = 0
+runaTAL = 0
+runaRAL = 0
+runaORT = 0
+runaTHUL = 0
+runaAMN = 0
+runaSOL = 0
+runaSHAEL = 0
+runaDOL = 0
+</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/initrunes$</regex>
+					</Alias>
+					<Alias isActive="yes" isFolder="no">
+						<name>/showrunes</name>
+						<script>cecho("\n&lt;sky_blue&gt;EL:  "..runaEL.."     RAL:   "..runaRAL) 
+cecho("\n&lt;sky_blue&gt;ELD: "..runaELD.."     ORT:   "..runaORT)
+cecho("\n&lt;sky_blue&gt;TIR: "..runaTIR.."     THUL:  "..runaTHUL)
+cecho("\n&lt;sky_blue&gt;NEF: "..runaNEF.."     AMN:   "..runaAMN)
+cecho("\n&lt;sky_blue&gt;ETH: "..runaETH.."     SOL:   "..runaSOL)
+cecho("\n&lt;sky_blue&gt;ITH: "..runaITH.."     SHAEL: "..runaSHAEL)
+cecho("\n&lt;sky_blue&gt;TAL: "..runaTAL.."     DOL:   "..runaDOL)</script>
+						<command></command>
+						<packageName></packageName>
+						<regex>^/showrunes$</regex>
 					</Alias>
 				</AliasGroup>
 			</AliasGroup>
@@ -5074,31 +5529,7 @@ kondycje = {"na skraju smierci", "ledwo zyw(y|a|e)", "zmasakrowan(y|a|e)", "ciez
 	"w zlej kondycji", "rann(y|a|e)", "poranion(y|a|e)", "pokiereszowan(y|a|e)", "lekko rann(y|a|e)", "poturbowan(y|a|e)",
 	"w dobrym stanie", "w swietnej kondycji", "w pelni zdrow(|a|e)"}
   
-hpcolors ={
-["na skraju smierci"]="&lt;sandy_brown&gt;#      ",             -- +
-["ledwo zywy"] = "&lt;green&gt;#      ",                  -- #
-["ledwo zywa"] = "&lt;green&gt;#      ",                  -- #
-["zmasakrowany"] =  "&lt;green&gt;#&lt;sandy_brown&gt;#     ",      -- #+
-["zmasakrowana"] =  "&lt;green&gt;#&lt;sandy_brown&gt;#     ",      -- #+
-["ciezko ranny"] = "&lt;green&gt;##     ",                   -- ##
-["ciezko ranna"] = "&lt;green&gt;##     ",                   -- ##
-["w zlym stanie"] =  "&lt;green&gt;##&lt;sandy_brown&gt;#    ",     -- ##+
-["w zlej kondycji"] = "&lt;green&gt;###    ",                  -- ###
-["ranny"]= "&lt;green&gt;###&lt;sandy_brown&gt;#   ",    -- ###+
-["ranna"]= "&lt;green&gt;###&lt;sandy_brown&gt;#   ",    -- ###+
-["poraniony"] = "&lt;green&gt;####   ",                  -- ####
-["poraniona"] = "&lt;green&gt;####   ",                  -- ####
-["pokiereszowany"] = "&lt;green&gt;####&lt;sandy_brown&gt;#  ",   -- ####+
-["pokiereszowana"] = "&lt;green&gt;####&lt;sandy_brown&gt;#  ",   -- ####+
-["lekko ranny"] = "&lt;green&gt;#####  ",                  -- #####
-["lekko ranna"] = "&lt;green&gt;#####  ",                  -- #####
-["poturbowany"] = "&lt;green&gt;#####&lt;sandy_brown&gt;# ",  -- #####+
-["poturbowana"] = "&lt;green&gt;#####&lt;sandy_brown&gt;# ",  -- #####+
-["w dobrym stanie"] = "&lt;green&gt;###### ",                  -- ######
-["w swietnej kondycji"] = "&lt;green&gt;######&lt;sandy_brown&gt;#", -- ######+
-["w pelni zdrow"] = "&lt;green&gt;#######",                  -- #######
-["w pelni zdrowa"] = "&lt;green&gt;#######",                  -- #######
-}
+
 
 ums = 
 {
@@ -5703,7 +6134,12 @@ require('utils')
 				<ScriptGroup isActive="yes" isFolder="yes">
 					<name>Kolorowanie</name>
 					<packageName></packageName>
-					<script>function ColorNajm(x)
+					<script></script>
+					<eventHandlerList />
+					<Script isActive="yes" isFolder="no">
+						<name>Kolorowanie</name>
+						<packageName></packageName>
+						<script>function ColorNajm(x)
 selectCaptureGroup(x)
 fg'medium_purple'
 resetFormat()
@@ -5721,8 +6157,16 @@ fg'thistle'
 resetFormat()
 end
 
+function ColorString(count)
+for i = 2, count do
+selectCaptureGroup(i)
+fg"medium_aquamarine"
+end
+  resetFormat()
+end
 </script>
-					<eventHandlerList />
+						<eventHandlerList />
+					</Script>
 				</ScriptGroup>
 			</ScriptGroup>
 		</ScriptGroup>
